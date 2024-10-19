@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=863657440723:domainName=mushus.net:region=ap-northeast-1": {
+    "Id": "/hostedzone/Z06237801WR5DJMIYLFZ2",
+    "Name": "mushus.net."
+  },
+  "hosted-zone:account=863657440723:domainName=mushus.net:region=us-east-1": {
+    "Id": "/hostedzone/Z06237801WR5DJMIYLFZ2",
+    "Name": "mushus.net."
+  }
+}

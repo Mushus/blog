@@ -1,27 +1,54 @@
 {
-  "name": "blog",
-  "version": "0.1.0",
-  "bin": {
-    "blog": "bin/blog.js"
-  },
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/node": "20.14.9",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.5",
-    "aws-cdk": "2.155.0",
-    "ts-node": "^10.9.2",
-    "typescript": "~5.5.3"
-  },
-  "dependencies": {
-    "aws-cdk-lib": "2.155.0",
-    "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
-  }
+	"name": "blog",
+	"version": "0.1.0",
+	"bin": {
+		"blog": "bin/blog.js"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"test": "vitest",
+		"cdk": "cdk",
+		"format": "biome check --write ./",
+		"dev": "tsx --watch ./assets/webapp/local.ts",
+		"dev2": "cd ./assets/web && vite",
+		"build2": "cd ./assets/web && vite build --mode client && vite build",
+		"build:image-viewer-request": "esbuild --bundle ./assets/image/viewer-request/index.ts --platform=node --outdir=./dist/image/viewer-request"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"@hono/vite-dev-server": "^0.15.2",
+		"@types/autosize": "^4.0.3",
+		"@types/aws-lambda": "^8.10.145",
+		"@types/bcrypt": "^5.0.2",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/node": "20.14.9",
+		"aws-cdk": "2.155.0",
+		"aws-sdk-client-mock": "^4.0.1",
+		"aws-sdk-client-mock-vitest": "^4.0.0",
+		"esbuild": "^0.23.1",
+		"node-addon-api": "^8.1.0",
+		"node-gyp": "^10.2.0",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.19.0",
+		"typescript": "~5.5.3",
+		"vitest": "^2.1.1"
+	},
+	"dependencies": {
+		"@aws-sdk/client-dynamodb": "^3.645.0",
+		"@aws-sdk/client-s3": "^3.651.1",
+		"@aws-sdk/lib-dynamodb": "^3.645.0",
+		"@hono/node-server": "^1.12.2",
+		"@hono/zod-validator": "^0.2.2",
+		"aws-cdk-lib": "2.155.0",
+		"bcryptjs": "^2.4.3",
+		"constructs": "^10.0.0",
+		"file-type": "^19.5.0",
+		"source-map-support": "^0.5.21",
+		"ulid": "^2.3.0"
+	},
+	"volta": {
+		"node": "20.17.0",
+		"npm": "10.8.3"
+	}
 }

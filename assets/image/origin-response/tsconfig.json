@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": [],
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": false,
+		"strictPropertyInitialization": false,
+		"noEmit": true,
+		"esModuleInterop": true
+	},
+	"exclude": ["origin-response/node_modules"]
+}
